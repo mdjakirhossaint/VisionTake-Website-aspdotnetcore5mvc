@@ -152,24 +152,7 @@ namespace VisionTake.Controllers
             }
         }
 
-        // GET: Addresses/Delete/5
-        //public async Task<IActionResult> Delete(Guid? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var tblAddress = await _context.TblAddresses
-        //        .FirstOrDefaultAsync(m => m.ID == id);
-        //    if (tblAddress == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View(tblAddress);
-        //}
-
+        
         // POST: Addresses/Delete/5
         [HttpPost]
 

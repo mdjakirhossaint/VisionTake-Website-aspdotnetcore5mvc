@@ -37,32 +37,32 @@
                         <a href="#">Product Name : @Model.ProductName</a>
                     </h2>
                     <h3 class="entry-title">
-                        <a href="#">Model : @Model.ProductName</a>
+                        <a href="#">Model : @Model.ProductModel</a>
                     </h3>
                     <div class="entry-meta">
                         <ul>
-                            <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Vision Take</a></li>
-                            <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">@Model.TimeStamp</time></a></li>
+                            <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="@Url.Action("Index","Home")">Vision Teke</a></li>
+                            <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="@Url.Action("Index","Home")"><time datetime="2020-01-01">@Model.TimeStamp</time></a></li>
                         </ul>
                     </div>
 
                     <div class="entry-content">
                         <p>
-                            @Model.Description
+                            @Html.Raw(Model.Description)
                         </p>
                     </div>
 
                     <div class="entry-footer">
                         <i class="bi bi-folder"></i>
                         <ul class="cats">
-                            <li><a href="#">Business</a></li>
+                            <li><a href="#">3D Printing</a></li>
                         </ul>
 
                         <i class="bi bi-tags"></i>
                         <ul class="tags">
-                            <li><a href="#">Creative</a></li>
-                            <li><a href="#">Tips</a></li>
-                            <li><a href="#">Marketing</a></li>
+                            <li><a href="#">Brest Surgery</a></li>
+                            <li><a href="#">Cardiothoracic Surgery</a></li>
+                            <li><a href="#">Gynecological Department</a></li>
                         </ul>
                     </div>
 

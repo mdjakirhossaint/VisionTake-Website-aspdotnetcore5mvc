@@ -4,32 +4,31 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
-
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<div class="row">
+    <div class="col-md-12 m-b-30">
+        <a href="@Url.Action("Create","Addresses")" class="btn btn-info">Add New Address</a>
+    </div>
+</div>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.PhoneNumber)
+                Phone Number
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.EmailAddress)
+               Email Address
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Address)
+                Address
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TimeStamp)
+                Action
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.PhoneNumber)
@@ -38,17 +37,36 @@
                 @Html.DisplayFor(modelItem => item.EmailAddress)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Address)
+                <p>
+                    @(item.Address.Length > 200 ? item.Address.Substring(0, 100) : item.Address)
+                </p>
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TimeStamp)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            <td class="btn-group">
+                <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-primary">Edit</a>
+                <a asp-route-id="@item.ID" data-id="@item.ID" class="btn btn-danger addressDeleteBtn">Delete</a>
             </td>
         </tr>
-}
+        }
     </tbody>
 </table>
+<script>
+    $(".addressDeleteBtn").click(function () {
+      debugger;
+      var result = confirm("Are you sure delete this");
+      if (result == true) {
+
+          $.ajax({
+              url: "@Url.Action("DeleteConfirmed", "Addresses")",
+              method: "post",
+              data: {
+
+                  ID: $(this).attr("data-id")
+              }
+          }).done(function (response) {
+              debugger;
+               window.location.href = "@Url.Action("Index", "Addresses")";
+             // $("#listingArea").html(response);
+          });
+      }
+  });
+</script>

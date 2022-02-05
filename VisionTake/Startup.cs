@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -52,6 +53,12 @@ namespace VisionTake
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            //if (env.IsProduction())
+            //{
+            //    app.Run(async(ApplicationDbContext)=> {
+            //        await ApplicationDbContext.Response.WriteAsync("isProduction");
+            //    } );
+            //}
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -71,6 +78,11 @@ namespace VisionTake
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+        }
+
+        private RequestDelegate async()
+        {
+            throw new NotImplementedException();
         }
     }
 }

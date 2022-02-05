@@ -40,27 +40,20 @@ namespace VisionTake.Controllers
         // GET: Slider/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
-            if (HttpContext.Session.GetString("FirstName") != null)
+            if (id == null)
             {
-                if (id == null)
-                {
-                    return NotFound();
-                }
-
-                var tblSlider = await _context.TblSliders
-                    .FirstOrDefaultAsync(m => m.ID == id);
-                ViewBag.AllSlider = _context.TblSliders.ToList().OrderByDescending(x => x.ID);
-                if (tblSlider == null)
-                {
-                    return NotFound();
-                }
-
-                return View(tblSlider);
+                return NotFound();
             }
-            else
+
+            var tblSlider = await _context.TblSliders
+                .FirstOrDefaultAsync(m => m.ID == id);
+            ViewBag.AllSlider = _context.TblSliders.ToList().OrderByDescending(x => x.ID);
+            if (tblSlider == null)
             {
-                return RedirectToAction("login", "Auth");
+                return NotFound();
             }
+
+             return View(tblSlider);
         }
 
         // GET: Slider/Create

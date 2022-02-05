@@ -544,3 +544,4 @@ F:\Website Develop\VisionTake\VisionTake\obj\Debug\net5.0\Razor\Views\Services\S
 F:\Website Develop\VisionTake\VisionTake\obj\Debug\net5.0\Razor\Views\Services\Detail.cshtml.g.cs
 F:\Website Develop\VisionTake\VisionTake\obj\Debug\net5.0\Razor\Views\News\Detail.cshtml.g.cs
 F:\Website Develop\VisionTake\VisionTake\obj\Debug\net5.0\Razor\Views\Event\Detail.cshtml.g.cs
+F:\Website Develop\VisionTake\VisionTake\obj\Debug\net5.0\Razor\Views\CEOMessage\Index.cshtml.g.cs

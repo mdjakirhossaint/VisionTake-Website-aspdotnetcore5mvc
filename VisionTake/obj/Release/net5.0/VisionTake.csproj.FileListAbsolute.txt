@@ -532,3 +532,15 @@ F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\VisionTake.dll
 F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\ref\VisionTake.dll
 F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\VisionTake.pdb
 F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\VisionTake.genruntimeconfig.cache
+F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\Razor\Views\Addresses\Create.cshtml.g.cs
+F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\Razor\Views\Addresses\Delete.cshtml.g.cs
+F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\Razor\Views\Addresses\Details.cshtml.g.cs
+F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\Razor\Views\Addresses\Edit.cshtml.g.cs
+F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\Razor\Views\Addresses\Index.cshtml.g.cs
+F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\Razor\Views\Contact\Index.cshtml.g.cs
+F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\Razor\Views\Event\Detail.cshtml.g.cs
+F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\Razor\Views\News\Detail.cshtml.g.cs
+F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\Razor\Views\Services\Detail.cshtml.g.cs
+F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\Razor\Views\Services\Services.cshtml.g.cs
+F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\Razor\Views\Subscribes\Index.cshtml.g.cs
+F:\Website Develop\VisionTake\VisionTake\obj\Release\net5.0\Razor\Views\TblContacts\Index.cshtml.g.cs

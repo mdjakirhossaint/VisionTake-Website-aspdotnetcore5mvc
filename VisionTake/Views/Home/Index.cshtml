@@ -50,11 +50,11 @@
         @foreach (var item in Model.TblAbout)
 	{
         <div class="row content">
-            <div class="col-lg-6" data-aos="fade-right">
+            <div class="col-lg-6 col-sm-12" data-aos="fade-right">
 
                 <img class="col-lg-12 col-sm-12 col-md-12" src="@Url.Content("~/Images/" +item.ImageUrl)" />
             </div>
-            <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
+            <div class="col-lg-6 col-sm-12 pt-4 pt-lg-0" data-aos="fade-left">
                 <h2 style="text-align:center">@item.AboutTitle</h2>
                 <p style="font-family: 'Poppins', sans-serif;">
                     @Html.Raw((item.AboutDescription.Length > 400 ? item.AboutDescription.Substring(0, 399) : item.AboutDescription))
@@ -133,10 +133,10 @@
                     <div class="testimonial-item">
                         <img src="@Url.Content("~/Images/" + item.ImageUrl)" class="testimonial-img" alt="">
                         <h3>@item.Name</h3>
-                        <h4>@item.Designation</h4>
+                        <h4>@Html.Raw(item.Designation)</h4>
                         <p style="font-family: 'Poppins', sans-serif;">
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            @item.Review
+                            @Html.Raw(item.Review)
                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                         </p>
                     </div>

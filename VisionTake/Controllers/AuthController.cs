@@ -43,7 +43,7 @@ namespace VisionTake.Controllers
                 return RedirectToAction("Index","AdminDashboard");
             }
             else {
-                ViewBag.message = "Your username or password is not valid";
+                ViewBag.message = "Your username or password is not valid!";
                 return View("login");
             }
         }
